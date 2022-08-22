@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Shortify</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+<!--  <link rel="stylesheet" href="./style.css">-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+  <form action="{{ url_for('shortner')}}" method="post">
+    <h1>Shortify</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" name="url_input" placeholder="Enter the link here" autocomplete="nope">
+      </div>
+    </div>
+    <div class="action">
+      <button type="submit" name="submit_button" value="submit_url">Shorten URL</button>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+
+<div class="login-form">
+  <form action="{{ url_for('shortner')}}" method="post">
+    <h1>Encrypt/Decrypt</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" name="url_input" placeholder="Enter the link here" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" name="key_input" placeholder="Key" autocomplete="nope">
+      </div>
+    </div>
+    <div class="action">
+      <button type="submit" name="submit_button" value="submit_encrypt">Encrypt</button>
+      <button type="submit" name="submit_button" value="submit_decrypt">Decrypt</button>
+    </div>
+  </form>
+</div>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
