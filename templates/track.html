@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Track</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main_table.css') }}"/>
+
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">IP address</th>
+								<th class="column2">Time</th>
+								<th class="column3">Link</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						{%for i in data%}
+								<tr>
+									<td class="column1">{{i.user_ip}}</td>
+									<td class="column2">{{i._id}}</td>
+									<td class="column3">
+										<a style="text-decoration: none;" href="https://youtu.be/{{i.url}}"  target="_blank">
+											https://youtu.be/{{i.url}}
+										</a>
+									</td>
+								</tr>
+						{%endfor%}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
