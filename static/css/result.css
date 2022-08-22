@@ -1,0 +1,72 @@
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+	background: linear-gradient(45deg, #4158d0, #c850c0);
+}
+
+.url-form {
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto 0 auto;
+  padding-top: 30vh;
+  }
+
+.url-form h1 {
+  color: #36304a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feedback-input {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.feedback-input:focus {
+  border: 2px solid #c95c03;
+}
+
+.button {
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+
+  width: 20%;
+  background: #36304a;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 500;
+}
+
+.button:hover {
+  background: #fff;
+  color: #36304a;
+  font-weight: 500;
+}
