@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/result.css') }}" />
+
+</head>
+<body>
+
+<div class="url-form">
+	<h1>{{query_type}}</h1>
+	<input type="text" value="{{ url }}" id="url" class="feedback-input" readonly>
+	<button onclick="copyURL()" class="button">Copy</button>
+</div>
+
+<script>
+function copyURL() {
+	var url = document.getElementById("url");
+	url.select();
+	url.setSelectionRange(	0, 99999)
+	document.execCommand("copy");
+}
+</script>
+
+</body>
+
+
+</html>
